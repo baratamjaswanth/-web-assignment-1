@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Online Book Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showPage('home')">
+
+<!-- ============================ HOME ============================ -->
+<div id="home" class="page">
+    <h1>📚 Welcome to the Online Book Store</h1>
+    <p>Read • Shop • Enjoy</p>
+
+    <a class="button" onclick="showPage('login')">Login</a>
+    <a class="button" onclick="showPage('register')">Register</a>
+    <a class="button" onclick="showPage('catalogue')">Catalogue</a>
+    <a class="button" onclick="showPage('cart')">Cart</a>
+    <a class="button" onclick="showPage('payment')">Payment</a>
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="page">
+    <h1>🔐 Login</h1>
+    <input id="userid" placeholder="User ID"><br>
+    <input id="password" type="password" placeholder="Password"><br>
+    <button onclick="login()">Login</button><br>
+    <button id="forgotBtn">Forgot Password?</button><br><br>
+    <a class="button" onclick="showPage('home')">Back</a>
+</div>
+
+<!-- REGISTRATION -->
+<div id="register" class="page">
+    <h1>📝 Membership Registration</h1>
+    <input id="name" placeholder="Full Name"><br>
+    <input id="age" placeholder="Age"><br>
+    <input id="aadhar" placeholder="Aadhar Number"><br>
+    <input id="contact" placeholder="Contact Number"><br>
+    <input id="email" placeholder="Email ID"><br>
+    <textarea id="address" placeholder="Full Address"></textarea><br>
+    <button onclick="registerMember()">Register</button><br><br>
+    <a class="button" onclick="showPage('home')">Back</a>
+</div>
+
+<!-- CATALOGUE -->
+<div id="catalogue" class="page">
+    <h1>📚 Our Book Collection</h1>
+
+    <div class="book">
+        <img src="https://m.media-amazon.com/images/I/71aFt4+OTOL.jpg">
+        <h3>The Alchemist</h3>
+        <p>$15</p>
+        <button onclick="addToCart('The Alchemist', 15)">Add to Cart</button>
+    </div>
+
+    <div class="book">
+        <img src="https://m.media-amazon.com/images/I/81wgcld4wxL.jpg">
+        <h3>Atomic Habits</h3>
+        <p>$18</p>
+        <button onclick="addToCart('Atomic Habits', 18)">Add to Cart</button>
+    </div>
+
+    <div class="book">
+        <img src="https://m.media-amazon.com/images/I/81QR3Lz0kPL.jpg">
+        <h3>Wings of Fire</h3>
+        <p>$12</p>
+        <button onclick="addToCart('Wings of Fire', 12)">Add to Cart</button>
+    </div>
+
+    <br>
+    <a class="button" onclick="showPage('home')">Back</a>
+</div>
+
+<!-- CART -->
+<div id="cart" class="page">
+    <h1>🛒 Your Cart</h1>
+    <table id="cartTable"></table>
+    <h2 id="totalAmount"></h2>
+    <button onclick="showPage('payment')">Proceed to Payment</button><br><br>
+    <a class="button" onclick="showPage('home')">Back</a>
+</div>
+
+<!-- PAYMENT -->
+<div id="payment" class="page">
+    <h1>💳 Payment Gateway</h1>
+    <h2>Scan & Pay using UPI</h2>
+    <h3>UPI ID: <b>9182922274@ybl</b></h3>
+    <img 
+        src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=9182922274@ybl&pn=OnlineBookStore" 
+        alt="QR Code">
+    <p>After payment, click Confirm</p>
+    <button onclick="alert('Payment Confirmed!')">Confirm Payment</button><br><br>
+    <a class="button" onclick="showPage('home')">Back</a>
+</div>
+
+<!-- ADMIN -->
+<div id="admin" class="page">
+    <h1>👨‍💻 Admin Dashboard</h1>
+    <h2>Registered Members</h2>
+    <table id="adminMembers"></table>
+    <h2>Cart Purchases</h2>
+    <table id="adminCart"></table>
+    <br>
+    <a class="button" onclick="showPage('home')">Back</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
