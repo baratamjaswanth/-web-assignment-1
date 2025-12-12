@@ -1,0 +1,81 @@
+body {
+    font-family: "Times New Roman";
+    margin: 0;
+    background: linear-gradient(to bottom right, #e3f2fd, #ffe5ec);
+}
+
+.page {
+    display: none;
+    padding: 40px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+.button {
+    background: #34495e;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+input, textarea, select {
+    padding: 10px;
+    width: 280px;
+    margin: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+button {
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    background: #0077b6;
+    color: white;
+    cursor: pointer;
+}
+
+.book {
+    background: white;
+    width: 260px;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0px 0px 8px #555;
+}
+
+.book img {
+    width: 150px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    background: white;
+    box-shadow: 0px 0px 10px #444;
+}
+
+td, th {
+    border: 1px solid #222;
+    padding: 12px;
+}
+
+#forgotBtn { 
+    display: none; 
+    background: red; 
+    margin-top: 10px; 
+}
